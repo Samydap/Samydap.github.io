@@ -355,7 +355,70 @@
             line-height: 1.6;
         }
 
+        /* Timeline estilo cómic */
+        .timeline {
+            position: relative;
+            padding-left: 4rem;
+            margin-top: 2rem;
+        }
 
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 6px;
+            background: repeating-linear-gradient(
+                0deg,
+                var(--comic-yellow) 0px,
+                var(--comic-yellow) 20px,
+                var(--comic-red) 20px,
+                var(--comic-red) 40px
+            );
+            box-shadow: 2px 0 0 var(--panel-border);
+        }
+
+        .timeline-item {
+            background: #2a2a2a;
+            border: 4px solid var(--panel-border);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+            box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.5);
+        }
+
+        .timeline-item::before {
+            content: '⚡';
+            position: absolute;
+            left: -60px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            background: var(--comic-yellow);
+            width: 50px;
+            height: 50px;
+            border: 4px solid var(--panel-border);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .timeline-item h4 {
+            font-family: 'Bangers', cursive;
+            font-size: 2rem;
+            color: var(--comic-yellow);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 0 var(--comic-black);
+        }
+
+        .timeline-item p {
+            color: var(--moon-silver);
+            line-height: 1.7;
+        }
+
+ 
     </style>
 </head>
 </html>
