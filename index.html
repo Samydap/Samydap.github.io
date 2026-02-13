@@ -41,19 +41,7 @@
             background-size: 15px 15px;
             pointer-events: none;
             z-index: 0;
-            .top-left-logo {
-                position: absolute;
-                top: 20px;
-                left: 20px;
-                width: 100px;
-                height: auto;
-                z-index: 10;
-                filter: drop-shadow(4px 4px 0px var(--comic-black));
-                transition: transform 0.3s ease;
-            }
-            .top-left-logo:hover {
-                transform: scale(1.1) rotate(-5deg);
-            }
+            
         }
         
         .container {
@@ -132,9 +120,9 @@
             position: absolute;
             top: 20px;
             left: 20px;
-            width: 100px;
+            width: 120px;
             height: auto;
-            z-index: 10;
+            z-index: 100;
             filter: drop-shadow(4px 4px 0px var(--comic-black));
             transition: transform 0.3s ease;
         }
@@ -537,9 +525,12 @@
                 padding-left: 3rem;
             }
             .top-left-logo {
-                width: 60px;
+                width: 70px;
                 top: 10px;
                 left: 10px;
+                position: relative; 
+                display: block;
+                margin-bottom: 10px;
             }
             .section-title {
                 font-size: 2.5rem;
@@ -548,8 +539,10 @@
     </style>
 
     <body>
+        <img src="SAWHO.png" alt="Logo Sawho" class="top-left-logo">
+        
         <div class="container">
-            <img src="SAWHO.png" alt="Logo Sawho" class="top-left-logo">
+            
             <header>
                 <h1>MOON KNIGHT</h1>
                 <p class="subtitle">¡EL PUÑO DE KHONSHU!</p>
