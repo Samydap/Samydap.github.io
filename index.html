@@ -28,19 +28,7 @@
             color: var(--comic-white);
             font-family: 'Comic Neue', cursive;
             overflow-x: hidden;
-            .top-left-logo {
-                position: absolute;
-                top: 20px;
-                left: 20px;
-                width: 100px;
-                height: auto;
-                z-index: 10;
-                filter: drop-shadow(4px 4px 0px var(--comic-black));
-                transition: transform 0.3s ease;
-            }
-            .top-left-logo:hover {
-                transform: scale(1.1) rotate(-5deg);
-            }
+            
         }
         
         body::before {
@@ -54,6 +42,19 @@
             background-size: 15px 15px;
             pointer-events: none;
             z-index: 0;
+            .top-left-logo {
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                width: 100px;
+                height: auto;
+                z-index: 10;
+                filter: drop-shadow(4px 4px 0px var(--comic-black));
+                transition: transform 0.3s ease;
+            }
+            .top-left-logo:hover {
+                transform: scale(1.1) rotate(-5deg);
+            }
         }
         
         .container {
