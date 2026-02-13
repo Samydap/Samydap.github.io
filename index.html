@@ -1,12 +1,12 @@
-
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moon Knight - El Puño de Khonshu</title>
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@300;400;700&family=Permanent+Marker&display=swap" rel="stylesheet">
     <style>
-        :root {
+         :root {
             --comic-black: #1a1a1a;
             --comic-white: #ffffff;
             --moon-silver: #c0c0c0;
@@ -16,20 +16,19 @@
             --comic-purple: #9b59b6;
             --panel-border: #000000;
         }
-
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
             background: var(--comic-black);
             color: var(--comic-white);
             font-family: 'Comic Neue', cursive;
             overflow-x: hidden;
         }
-
         
         body::before {
             content: '';
@@ -38,13 +37,12 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: 
-                radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-image: radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
             background-size: 15px 15px;
             pointer-events: none;
             z-index: 0;
         }
-
+        
         .container {
             max-width: 1400px;
             margin: 0 auto;
@@ -52,8 +50,7 @@
             position: relative;
             z-index: 1;
         }
-
-       
+        
         header {
             background: linear-gradient(135deg, var(--comic-red) 0%, var(--comic-purple) 100%);
             padding: 3rem 2rem;
@@ -61,32 +58,34 @@
             border: 6px solid var(--panel-border);
             margin: 2rem 0 3rem;
             position: relative;
-            box-shadow: 
-                8px 8px 0 rgba(0, 0, 0, 0.3),
-                12px 12px 0 var(--comic-yellow);
+            box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.3), 12px 12px 0 var(--comic-yellow);
         }
-
-
+        
         h1 {
             font-family: 'Bangers', cursive;
             font-size: 6rem;
             letter-spacing: 0.15em;
             text-transform: uppercase;
             color: var(--comic-white);
-            text-shadow: 
-                4px 4px 0 var(--comic-black),
-                6px 6px 0 var(--comic-yellow),
-                8px 8px 0 var(--comic-black);
+            text-shadow: 4px 4px 0 var(--comic-black), 6px 6px 0 var(--comic-yellow), 8px 8px 0 var(--comic-black);
             margin-bottom: 1rem;
             animation: popIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
-
+        
         @keyframes popIn {
-            0% { transform: scale(0); opacity: 0; }
-            70% { transform: scale(1.1); }
-            100% { transform: scale(1); opacity: 1; }
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            70% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
         }
-
+        
         .subtitle {
             font-family: 'Permanent Marker', cursive;
             font-size: 1.8rem;
@@ -94,7 +93,6 @@
             text-shadow: 2px 2px 0 var(--comic-black);
             letter-spacing: 0.1em;
         }
-
         
         .comic-panel {
             background: #2a2a2a;
@@ -104,7 +102,7 @@
             position: relative;
             box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.5);
         }
-
+        
         .comic-panel::before {
             content: '';
             position: absolute;
@@ -116,36 +114,33 @@
             z-index: -1;
             opacity: 0.3;
         }
-
+        
         .top-left-logo {
-        position: absolute;
-        top: 20px;       
-        left: 20px;      
-        width: 100px;    
-        height: auto;
-        z-index: 10;
-        filter: drop-shadow(4px 4px 0px var(--comic-black)); 
-        transition: transform 0.3s ease;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 100px;
+            height: auto;
+            z-index: 10;
+            filter: drop-shadow(4px 4px 0px var(--comic-black));
+            transition: transform 0.3s ease;
         }
-
+        
         .top-left-logo:hover {
-                transform: scale(1.1) rotate(-5deg);
+            transform: scale(1.1) rotate(-5deg);
         }
-
-       
+        
         .section-title {
             font-family: 'Bangers', cursive;
             font-size: 3.5rem;
             color: var(--comic-yellow);
-            text-shadow: 
-                3px 3px 0 var(--comic-black),
-                5px 5px 0 var(--comic-red);
+            text-shadow: 3px 3px 0 var(--comic-black), 5px 5px 0 var(--comic-red);
             margin-bottom: 2rem;
             letter-spacing: 0.1em;
             position: relative;
             display: inline-block;
         }
-
+        
         .section-title::after {
             content: '';
             position: absolute;
@@ -156,7 +151,6 @@
             background: var(--comic-yellow);
             box-shadow: 0 3px 0 var(--comic-black);
         }
-
         
         .hero-section {
             display: grid;
@@ -164,7 +158,7 @@
             gap: 3rem;
             margin-bottom: 3rem;
         }
-
+        
         .hero-image-container {
             position: relative;
             border: 5px solid var(--panel-border);
@@ -172,7 +166,7 @@
             overflow: hidden;
             background: #0a0a0a;
         }
-
+        
         .hero-image {
             width: 100%;
             height: 500px;
@@ -185,21 +179,21 @@
             font-size: 2rem;
             position: relative;
         }
-
+        
         .hero-image {
             background-image: url('https://cdn.marvel.com/u/prod/marvel/i/mg/6/c0/5807787aa90ae/clean.jpg');
             background-size: cover;
             background-position: center;
         }
+        
         .hero-image::before {
             content: '';
             position: absolute;
             inset: 0;
             background: linear-gradient(to bottom, transparent 60%, rgba(0, 0, 0, 0.8));
         }
-        */
-
-        .speech-bubble {
+        
+        */ .speech-bubble {
             background: var(--comic-white);
             color: var(--comic-black);
             padding: 1.5rem;
@@ -211,7 +205,7 @@
             font-size: 1.1rem;
             box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
         }
-
+        
         .speech-bubble::before {
             content: '';
             position: absolute;
@@ -223,7 +217,7 @@
             border-right: 15px solid transparent;
             border-top: 20px solid var(--panel-border);
         }
-
+        
         .speech-bubble::after {
             content: '';
             position: absolute;
@@ -235,7 +229,7 @@
             border-right: 12px solid transparent;
             border-top: 16px solid var(--comic-white);
         }
-
+        
         .hero-content h2 {
             font-family: 'Bangers', cursive;
             font-size: 2.8rem;
@@ -244,14 +238,13 @@
             margin-bottom: 1.5rem;
             letter-spacing: 0.05em;
         }
-
+        
         .hero-content p {
             font-size: 1.1rem;
             line-height: 1.8;
             margin-bottom: 1.5rem;
             color: var(--moon-silver);
         }
-
         
         .info-grid {
             display: grid;
@@ -259,7 +252,7 @@
             gap: 2rem;
             margin-top: 2rem;
         }
-
+        
         .info-card {
             background: var(--comic-blue);
             border: 4px solid var(--panel-border);
@@ -268,28 +261,36 @@
             transition: all 0.3s ease;
             box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.3);
         }
-
-        .info-card:nth-child(2) { background: var(--comic-red); }
-        .info-card:nth-child(3) { background: var(--comic-purple); }
-        .info-card:nth-child(4) { background: var(--comic-yellow); color: var(--comic-black); }
-
+        
+        .info-card:nth-child(2) {
+            background: var(--comic-red);
+        }
+        
+        .info-card:nth-child(3) {
+            background: var(--comic-purple);
+        }
+        
+        .info-card:nth-child(4) {
+            background: var(--comic-yellow);
+            color: var(--comic-black);
+        }
+        
         .info-card:hover {
             transform: translate(-4px, -4px);
             box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.4);
         }
-
+        
         .info-card h3 {
             font-family: 'Bangers', cursive;
             font-size: 1.8rem;
             margin-bottom: 0.5rem;
             text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
         }
-
+        
         .info-card p {
             font-weight: 700;
             font-size: 1.1rem;
         }
-
         
         .quote-box {
             background: var(--comic-yellow);
@@ -304,7 +305,7 @@
             box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.5);
             position: relative;
         }
-
+        
         .quote-box::before {
             content: '★';
             position: absolute;
@@ -313,7 +314,7 @@
             font-size: 3rem;
             opacity: 0.3;
         }
-
+        
         .quote-box::after {
             content: '★';
             position: absolute;
@@ -322,7 +323,6 @@
             font-size: 3rem;
             opacity: 0.3;
         }
-
         
         .abilities-grid {
             display: grid;
@@ -330,7 +330,7 @@
             gap: 2rem;
             margin-top: 2rem;
         }
-
+        
         .ability-item {
             background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
             border: 4px solid var(--comic-blue);
@@ -339,12 +339,12 @@
             position: relative;
             transition: all 0.3s ease;
         }
-
+        
         .ability-item:hover {
             transform: rotate(-1deg) scale(1.02);
             border-color: var(--comic-red);
         }
-
+        
         .ability-item strong {
             font-family: 'Bangers', cursive;
             font-size: 1.5rem;
@@ -353,19 +353,18 @@
             margin-bottom: 0.5rem;
             text-shadow: 2px 2px 0 var(--comic-black);
         }
-
+        
         .ability-item p {
             color: var(--moon-silver);
             line-height: 1.6;
         }
-
         
         .timeline {
             position: relative;
             padding-left: 4rem;
             margin-top: 2rem;
         }
-
+        
         .timeline::before {
             content: '';
             position: absolute;
@@ -373,16 +372,10 @@
             top: 0;
             bottom: 0;
             width: 6px;
-            background: repeating-linear-gradient(
-                0deg,
-                var(--comic-yellow) 0px,
-                var(--comic-yellow) 20px,
-                var(--comic-red) 20px,
-                var(--comic-red) 40px
-            );
+            background: repeating-linear-gradient( 0deg, var(--comic-yellow) 0px, var(--comic-yellow) 20px, var(--comic-red) 20px, var(--comic-red) 40px);
             box-shadow: 2px 0 0 var(--panel-border);
         }
-
+        
         .timeline-item {
             background: #2a2a2a;
             border: 4px solid var(--panel-border);
@@ -391,7 +384,7 @@
             position: relative;
             box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.5);
         }
-
+        
         .timeline-item::before {
             content: '⚡';
             position: absolute;
@@ -408,7 +401,7 @@
             align-items: center;
             justify-content: center;
         }
-
+        
         .timeline-item h4 {
             font-family: 'Bangers', cursive;
             font-size: 2rem;
@@ -416,12 +409,11 @@
             margin-bottom: 1rem;
             text-shadow: 2px 2px 0 var(--comic-black);
         }
-
+        
         .timeline-item p {
             color: var(--moon-silver);
             line-height: 1.7;
         }
-
         
         .gallery-grid {
             display: grid;
@@ -429,9 +421,9 @@
             gap: 2rem;
             margin-top: 2rem;
         }
-
+        
         .gallery-item {
-            height: 300px;
+            height: 600px;
             border: 5px solid var(--panel-border);
             background: #0a0a0a;
             display: flex;
@@ -444,45 +436,45 @@
             position: relative;
             overflow: hidden;
         }
-
+        
         .gallery-item:nth-child(1) {
             background-image: url('https://lumiere-a.akamaihd.net/v1/images/moon_knight_full_poster_a1af18d1.png');
             background-size: cover;
             background-position: center;
         }
+        
         .gallery-item:nth-child(2) {
             background-image: url('https://cdn.marvel.com/u/prod/marvel/i/mg/6/c0/5807787aa90ae/clean.jpg');
             background-size: cover;
             background-position: center;
         }
+        
         .gallery-item:nth-child(3) {
             background-image: url('https://cdn.marvel.com/u/prod/marvel/i/mg/b/03/5c50c38398407/clean.jpg');
             background-size: cover;
             background-position: center;
         }
-        */
-
-        .gallery-item:hover {
+        
+        */ .gallery-item:hover {
             transform: scale(1.05) rotate(2deg);
             box-shadow: 10px 10px 0 var(--comic-yellow);
             z-index: 10;
         }
-
         
         .video-section {
             margin-top: 3rem;
         }
-
+        
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; 
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
             border: 6px solid var(--panel-border);
             box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.5);
             background: #000;
         }
-
+        
         .video-container iframe {
             position: absolute;
             top: 0;
@@ -490,14 +482,14 @@
             width: 100%;
             height: 100%;
         }
-
+        
         .video-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
             margin-top: 2rem;
         }
-
+        
         footer {
             background: linear-gradient(135deg, var(--comic-purple) 0%, var(--comic-blue) 100%);
             border: 5px solid var(--panel-border);
@@ -506,241 +498,223 @@
             margin: 3rem 0;
             box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.5);
         }
-
+        
         footer p {
             font-family: 'Permanent Marker', cursive;
             font-size: 1.2rem;
             color: var(--comic-white);
             text-shadow: 2px 2px 0 var(--comic-black);
         }
-
-       
+        
         @media (max-width: 768px) {
             h1 {
                 font-size: 3.5rem;
             }
-            
             .hero-section {
                 grid-template-columns: 1fr;
             }
-            
             .abilities-grid,
             .gallery-grid,
             .video-grid {
                 grid-template-columns: 1fr;
             }
-            
             .timeline {
                 padding-left: 3rem;
             }
-            
             .top-left-logo {
-            width: 60px;
-            top: 10px;
-            left: 10px;
+                width: 60px;
+                top: 10px;
+                left: 10px;
             }
-
             .section-title {
                 font-size: 2.5rem;
             }
         }
     </style>
+
     <body>
-      <div class="container">
-        <header>
-            <img src="SAWHO.png" alt="Logo Sawho" class="top-left-logo">
-            <h1>MOON KNIGHT</h1>
-            <p class="subtitle">¡EL PUÑO DE KHONSHU!</p>
-        </header>
+        <div class="container">
+            <header>
+                <img src="SAWHO.png" alt="Logo Sawho" class="top-left-logo">
+                <h1>MOON KNIGHT</h1>
+                <p class="subtitle">¡EL PUÑO DE KHONSHU!</p>
+            </header>
 
-        <div class="comic-panel">
-            <div class="hero-section">
-                <div class="hero-image-container">
-                    <div class="hero-image">
-                        
+            <div class="comic-panel">
+                <div class="hero-section">
+                    <div class="hero-image-container">
+                        <div class="hero-image">
+
+                        </div>
+                    </div>
+                    <div class="hero-content">
+                        <h2>¡VENGADOR NOCTURNO!</h2>
+                        <p>Marc Spector es un mercenario que murió en Egipto y fue resucitado por el dios de la luna Khonshu. Ahora, como Moon Knight, lucha contra el crimen en las calles nocturnas, cargando con múltiples personalidades y la bendición de
+                            una deidad ancestral.</p>
+                        <div class="speech-bubble">
+                            ¡Más que un simple justiciero, Moon Knight representa la batalla interna entre la cordura y la locura!
+                        </div>
                     </div>
                 </div>
-                <div class="hero-content">
-                    <h2>¡VENGADOR NOCTURNO!</h2>
-                    <p>Marc Spector es un mercenario que murió en Egipto y fue resucitado por el dios de la luna Khonshu. Ahora, como Moon Knight, lucha contra el crimen en las calles nocturnas, cargando con múltiples personalidades y la bendición de una deidad ancestral.</p>
-                    <div class="speech-bubble">
-                        ¡Más que un simple justiciero, Moon Knight representa la batalla interna entre la cordura y la locura!
+            </div>
+            <div class="comic-panel">
+                <h2 class="section-title">¡IDENTIDAD!</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>NOMBRE REAL</h3>
+                        <p>Marc Spector</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>ALIAS</h3>
+                        <p>Steven Grant, Jake Lockley, Mr. Knight</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>AFILIACIÓN</h3>
+                        <p>Vengadores, Defensores</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>PRIMERA APARICIÓN</h3>
+                        <p>Werewolf by Night #32 (1975)</p>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="comic-panel">
-            <h2 class="section-title">¡IDENTIDAD!</h2>
-            <div class="info-grid">
-                <div class="info-card">
-                    <h3>NOMBRE REAL</h3>
-                    <p>Marc Spector</p>
-                </div>
-                <div class="info-card">
-                    <h3>ALIAS</h3>
-                    <p>Steven Grant, Jake Lockley, Mr. Knight</p>
-                </div>
-                <div class="info-card">
-                    <h3>AFILIACIÓN</h3>
-                    <p>Vengadores, Defensores</p>
-                </div>
-                <div class="info-card">
-                    <h3>PRIMERA APARICIÓN</h3>
-                    <p>Werewolf by Night #32 (1975)</p>
-                </div>
-            </div>
-        </div>
 
-        <div class="quote-box">
-            ¡No soy un héroe! Soy el que te encuentra cuando la oscuridad cae. ¡Soy el puño de la venganza! ¡Soy MOON KNIGHT!
-        </div>
+            <div class="quote-box">
+                ¡No soy un héroe! Soy el que te encuentra cuando la oscuridad cae. ¡Soy el puño de la venganza! ¡Soy MOON KNIGHT!
+            </div>
 
-        <div class="comic-panel">
-            <h2 class="section-title">¡PODERES Y HABILIDADES!</h2>
-            <div class="abilities-grid">
-                <div class="ability-item">
-                    <strong>FUERZA SOBREHUMANA</strong>
-                    <p>Sus habilidades físicas aumentan con las fases de la luna, siendo más poderoso durante la luna llena.</p>
-                </div>
-                <div class="ability-item">
-                    <strong>RESISTENCIA MEJORADA</strong>
-                    <p>Capacidad para soportar daño físico extremo y recuperarse rápidamente de lesiones.</p>
-                </div>
-                <div class="ability-item">
-                    <strong>EXPERTO EN COMBATE</strong>
-                    <p>Entrenamiento militar avanzado y dominio de múltiples artes marciales y técnicas de combate.</p>
-                </div>
-                <div class="ability-item">
-                    <strong>ARSENAL ESPECIALIZADO</strong>
-                    <p>Utiliza crescentes de luna como armas arrojadizas, además de un traje blindado de kevlar.</p>
-                </div>
-                <div class="ability-item">
-                    <strong>INMUNIDAD MENTAL</strong>
-                    <p>Su fragmentada psique lo hace resistente a ataques telepáticos y manipulación mental.</p>
-                </div>
-                <div class="ability-item">
-                    <strong>CONEXIÓN CON KHONSHU</strong>
-                    <p>Recibe visiones y orientación del dios egipcio de la luna, aunque esto complica su salud mental.</p>
-                </div>
-            </div>
-        </div>
-        <div class="comic-panel">
-            <h2 class="section-title">¡HISTORIA ÉPICA!</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h4>EL MERCENARIO</h4>
-                    <p>Marc Spector trabajaba como mercenario en Egipto junto a Raoul Bushman. Durante una misión, Bushman traicionó a su equipo y dejó a Marc moribundo cerca de una estatua del dios Khonshu.</p>
-                </div>
-                <div class="timeline-item">
-                    <h4>LA RESURRECCIÓN</h4>
-                    <p>Al borde de la muerte, Marc fue encontrado por sacerdotes locales que lo llevaron ante la estatua de Khonshu. El dios de la luna le ofreció una segunda oportunidad a cambio de convertirse en su avatar en la Tierra.</p>
-                </div>
-                <div class="timeline-item">
-                    <h4>NACIMIENTO DE MOON KNIGHT</h4>
-                    <p>Marc aceptó el pacto y regresó a la vida con poderes sobrenaturales. Adoptó la identidad de Moon Knight y juró proteger a los viajeros nocturnos y castigar a los malvados.</p>
-                </div>
-                <div class="timeline-item">
-                    <h4>MÚLTIPLES IDENTIDADES</h4>
-                    <p>Para operar efectivamente, Marc desarrolló múltiples personalidades: Steven Grant (millonario filántropo) y Jake Lockley (taxista callejero), además de luchar con su cordura y la influencia constante de Khonshu.</p>
-                </div>
-                <div class="timeline-item">
-                    <h4>VENGADOR DE LA NOCHE</h4>
-                    <p>Moon Knight se ha unido a varios equipos de superhéroes, aunque su naturaleza violenta y sus métodos brutales a menudo lo ponen en conflicto con otros héroes.</p>
+            <div class="comic-panel">
+                <h2 class="section-title">¡PODERES Y HABILIDADES!</h2>
+                <div class="abilities-grid">
+                    <div class="ability-item">
+                        <strong>FUERZA SOBREHUMANA</strong>
+                        <p>Sus habilidades físicas aumentan con las fases de la luna, siendo más poderoso durante la luna llena.</p>
+                    </div>
+                    <div class="ability-item">
+                        <strong>RESISTENCIA MEJORADA</strong>
+                        <p>Capacidad para soportar daño físico extremo y recuperarse rápidamente de lesiones.</p>
+                    </div>
+                    <div class="ability-item">
+                        <strong>EXPERTO EN COMBATE</strong>
+                        <p>Entrenamiento militar avanzado y dominio de múltiples artes marciales y técnicas de combate.</p>
+                    </div>
+                    <div class="ability-item">
+                        <strong>ARSENAL ESPECIALIZADO</strong>
+                        <p>Utiliza crescentes de luna como armas arrojadizas, además de un traje blindado de kevlar.</p>
+                    </div>
+                    <div class="ability-item">
+                        <strong>INMUNIDAD MENTAL</strong>
+                        <p>Su fragmentada psique lo hace resistente a ataques telepáticos y manipulación mental.</p>
+                    </div>
+                    <div class="ability-item">
+                        <strong>CONEXIÓN CON KHONSHU</strong>
+                        <p>Recibe visiones y orientación del dios egipcio de la luna, aunque esto complica su salud mental.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="comic-panel">
-            <h2 class="section-title">¡LAS PERSONALIDADES!</h2>
-            <div class="info-grid">
-                <div class="info-card">
-                    <h3>MARC SPECTOR</h3>
-                    <p>La personalidad original. Mercenario endurecido por la guerra, cargado de culpa y trauma. Es el guerrero que no teme usar la violencia.</p>
-                </div>
-                <div class="info-card">
-                    <h3>STEVEN GRANT</h3>
-                    <p>Millonario filántropo y hombre de negocios. Maneja las finanzas que permiten las operaciones de Moon Knight.</p>
-                </div>
-                <div class="info-card">
-                    <h3>JAKE LOCKLEY</h3>
-                    <p>Taxista que recorre las calles nocturnas. Es los ojos y oídos de Moon Knight en la calle, reuniendo información.</p>
-                </div>
-                <div class="info-card">
-                    <h3>MR. KNIGHT</h3>
-                    <p>Personalidad que viste traje blanco. Actúa como consultor sobrenatural, manejando casos paranormales.</p>
-                </div>
-            </div>
-        </div>
-        <div class="comic-panel">
-            <h2 class="section-title">¡GALERÍA VISUAL!</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    
-                    IMAGEN 1
-                </div>
-                <div class="gallery-item">
-                    
-                    IMAGEN 2
-                </div>
-                <div class="gallery-item">
-                    
-                    IMAGEN 3
+            <div class="comic-panel">
+                <h2 class="section-title">¡HISTORIA ÉPICA!</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4>EL MERCENARIO</h4>
+                        <p>Marc Spector trabajaba como mercenario en Egipto junto a Raoul Bushman. Durante una misión, Bushman traicionó a su equipo y dejó a Marc moribundo cerca de una estatua del dios Khonshu.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>LA RESURRECCIÓN</h4>
+                        <p>Al borde de la muerte, Marc fue encontrado por sacerdotes locales que lo llevaron ante la estatua de Khonshu. El dios de la luna le ofreció una segunda oportunidad a cambio de convertirse en su avatar en la Tierra.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>NACIMIENTO DE MOON KNIGHT</h4>
+                        <p>Marc aceptó el pacto y regresó a la vida con poderes sobrenaturales. Adoptó la identidad de Moon Knight y juró proteger a los viajeros nocturnos y castigar a los malvados.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>MÚLTIPLES IDENTIDADES</h4>
+                        <p>Para operar efectivamente, Marc desarrolló múltiples personalidades: Steven Grant (millonario filántropo) y Jake Lockley (taxista callejero), además de luchar con su cordura y la influencia constante de Khonshu.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>VENGADOR DE LA NOCHE</h4>
+                        <p>Moon Knight se ha unido a varios equipos de superhéroes, aunque su naturaleza violenta y sus métodos brutales a menudo lo ponen en conflicto con otros héroes.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="comic-panel">
-            <h2 class="section-title">¡VIDEOS ÉPICOS!</h2>
-            
-            
-            <div class="video-section">
-                <h3 style="font-family: 'Bangers', cursive; font-size: 2rem; color: var(--comic-yellow); margin-bottom: 1rem;">
-                    TRAILER OFICIAL DE MOON KNIGHT
-                </h3>
-                <div class="video-container">
-                    <iframe 
-    src="https://www.youtube-nocookie.com/embed/x7Krla_UxRg" 
-    title="Moon Knight Trailer" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen>
+            <div class="comic-panel">
+                <h2 class="section-title">¡LAS PERSONALIDADES!</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>MARC SPECTOR</h3>
+                        <p>La personalidad original. Mercenario endurecido por la guerra, cargado de culpa y trauma. Es el guerrero que no teme usar la violencia.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>STEVEN GRANT</h3>
+                        <p>Millonario filántropo y hombre de negocios. Maneja las finanzas que permiten las operaciones de Moon Knight.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>JAKE LOCKLEY</h3>
+                        <p>Taxista que recorre las calles nocturnas. Es los ojos y oídos de Moon Knight en la calle, reuniendo información.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>MR. KNIGHT</h3>
+                        <p>Personalidad que viste traje blanco. Actúa como consultor sobrenatural, manejando casos paranormales.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="comic-panel">
+                <h2 class="section-title">¡GALERÍA VISUAL!</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+
+
+                    </div>
+                    <div class="gallery-item">
+
+
+                    </div>
+                    <div class="gallery-item">
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="comic-panel">
+                <h2 class="section-title">¡VIDEOS ÉPICOS!</h2>
+
+
+                <div class="video-section">
+                    <h3 style="font-family: 'Bangers', cursive; font-size: 2rem; color: var(--comic-yellow); margin-bottom: 1rem;">
+                        TRAILER OFICIAL DE MOON KNIGHT
+                    </h3>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube-nocookie.com/embed/x7Krla_UxRg" title="Moon Knight Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
+                    </div>
+                </div>
+
+
+                <div class="video-section" style="margin-top: 3rem;">
+                    <h3 style="font-family: 'Bangers', cursive; font-size: 2rem; color: var(--comic-yellow); margin-bottom: 1rem;">
+                        MÁS CONTENIDO
+                    </h3>
+                    <div class="video-grid">
+                        <div class="video-container">
+
+                            <iframe src="https://www.youtube-nocookie.com/embed/SI4Kmqu8gGY" title="Moon Knight Video 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                        </iframe>
+                        </div>
+                        <div class="video-container">
+
+                            <iframe src="https://www.youtube-nocookie.com/embed/uVyAoFvRkCo" title="Moon Knight Video 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                        </iframe>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            
-            <div class="video-section" style="margin-top: 3rem;">
-                <h3 style="font-family: 'Bangers', cursive; font-size: 2rem; color: var(--comic-yellow); margin-bottom: 1rem;">
-                    MÁS CONTENIDO
-                </h3>
-                <div class="video-grid">
-                    <div class="video-container">
-                        
-                        <iframe 
-                            src="https://www.youtube-nocookie.com/embed/SI4Kmqu8gGY" 
-                            title="Moon Knight Video 2" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                    <div class="video-container">
-                        
-                        <iframe 
-                            src="https://www.youtube-nocookie.com/embed/uVyAoFvRkCo" 
-                            title="Moon Knight Video 3" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-            </div>
+            <footer>
+                <p>"¡La luna brilla más intensamente en la oscuridad más profunda!"</p>
+                <p style="margin-top: 1rem; font-size: 0.9rem;">Moon Knight © Marvel Comics | Fan Page 2026</p>
+            </footer>
         </div>
-
-        <footer>
-            <p>"¡La luna brilla más intensamente en la oscuridad más profunda!"</p>
-            <p style="margin-top: 1rem; font-size: 0.9rem;">Moon Knight © Marvel Comics | Fan Page 2026</p>
-        </footer>
-    </div>
     </body>
 </head>
+
 </html>
