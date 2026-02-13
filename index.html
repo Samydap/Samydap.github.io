@@ -151,6 +151,174 @@
             box-shadow: 0 3px 0 var(--comic-black);
         }
 
+        /* Hero Section */
+        .hero-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .hero-image-container {
+            position: relative;
+            border: 5px solid var(--panel-border);
+            box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            background: #0a0a0a;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            color: var(--moon-silver);
+            font-family: 'Bangers', cursive;
+            font-size: 2rem;
+            position: relative;
+        }
+
+        /* IMAGEN PRINCIPAL DEL HÉROE: Descomenta y cambia la ruta */
+        /*
+        .hero-image {
+            background-image: url('ruta/a/moon-knight-hero.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .hero-image::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, transparent 60%, rgba(0, 0, 0, 0.8));
+        }
+        */
+
+        .speech-bubble {
+            background: var(--comic-white);
+            color: var(--comic-black);
+            padding: 1.5rem;
+            border: 4px solid var(--panel-border);
+            border-radius: 20px;
+            position: relative;
+            margin: 2rem 0;
+            font-weight: 700;
+            font-size: 1.1rem;
+            box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        .speech-bubble::before {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50px;
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-top: 20px solid var(--panel-border);
+        }
+
+        .speech-bubble::after {
+            content: '';
+            position: absolute;
+            bottom: -14px;
+            left: 53px;
+            width: 0;
+            height: 0;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-top: 16px solid var(--comic-white);
+        }
+
+        .hero-content h2 {
+            font-family: 'Bangers', cursive;
+            font-size: 2.8rem;
+            color: var(--comic-yellow);
+            text-shadow: 3px 3px 0 var(--comic-black);
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: var(--moon-silver);
+        }
+
+        /* Info Cards estilo cómic */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .info-card {
+            background: var(--comic-blue);
+            border: 4px solid var(--panel-border);
+            padding: 2rem;
+            position: relative;
+            transition: all 0.3s ease;
+            box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        .info-card:nth-child(2) { background: var(--comic-red); }
+        .info-card:nth-child(3) { background: var(--comic-purple); }
+        .info-card:nth-child(4) { background: var(--comic-yellow); color: var(--comic-black); }
+
+        .info-card:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.4);
+        }
+
+        .info-card h3 {
+            font-family: 'Bangers', cursive;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        .info-card p {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        /* Quote Box estilo cómic */
+        .quote-box {
+            background: var(--comic-yellow);
+            color: var(--comic-black);
+            padding: 2.5rem;
+            border: 5px solid var(--panel-border);
+            margin: 3rem 0;
+            font-family: 'Permanent Marker', cursive;
+            font-size: 1.5rem;
+            line-height: 1.6;
+            text-align: center;
+            box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+
+        .quote-box::before {
+            content: '★';
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 3rem;
+            opacity: 0.3;
+        }
+
+        .quote-box::after {
+            content: '★';
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            font-size: 3rem;
+            opacity: 0.3;
+        }
+
 
     </style>
 </head>
