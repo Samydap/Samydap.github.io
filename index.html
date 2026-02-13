@@ -1,12 +1,157 @@
-<!DOCTYPE html>
-<html lang="en">
+!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Moon Knight - El Puño de Khonshu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@300;400;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --comic-black: #1a1a1a;
+            --comic-white: #ffffff;
+            --moon-silver: #c0c0c0;
+            --comic-blue: #3498db;
+            --comic-red: #e74c3c;
+            --comic-yellow: #f1c40f;
+            --comic-purple: #9b59b6;
+            --panel-border: #000000;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--comic-black);
+            color: var(--comic-white);
+            font-family: 'Comic Neue', cursive;
+            overflow-x: hidden;
+        }
+
+        /* Patrón de puntos estilo cómic (halftone) */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 15px 15px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Header estilo cómic */
+        header {
+            background: linear-gradient(135deg, var(--comic-red) 0%, var(--comic-purple) 100%);
+            padding: 3rem 2rem;
+            text-align: center;
+            border: 6px solid var(--panel-border);
+            margin: 2rem 0 3rem;
+            position: relative;
+            box-shadow: 
+                8px 8px 0 rgba(0, 0, 0, 0.3),
+                12px 12px 0 var(--comic-yellow);
+        }
+
+        /* IMAGEN DE FONDO DEL HEADER: Descomenta y cambia la ruta */
+        /*
+        header {
+            background-image: url('ruta/a/header-background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: multiply;
+        }
+        */
+
+        h1 {
+            font-family: 'Bangers', cursive;
+            font-size: 6rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--comic-white);
+            text-shadow: 
+                4px 4px 0 var(--comic-black),
+                6px 6px 0 var(--comic-yellow),
+                8px 8px 0 var(--comic-black);
+            margin-bottom: 1rem;
+            animation: popIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        @keyframes popIn {
+            0% { transform: scale(0); opacity: 0; }
+            70% { transform: scale(1.1); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .subtitle {
+            font-family: 'Permanent Marker', cursive;
+            font-size: 1.8rem;
+            color: var(--comic-yellow);
+            text-shadow: 2px 2px 0 var(--comic-black);
+            letter-spacing: 0.1em;
+        }
+
+        /* Panel de cómic */
+        .comic-panel {
+            background: #2a2a2a;
+            border: 5px solid var(--panel-border);
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            position: relative;
+            box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.5);
+        }
+
+        .comic-panel::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            background: linear-gradient(45deg, var(--comic-yellow) 0%, var(--comic-red) 100%);
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        /* Título de sección estilo cómic */
+        .section-title {
+            font-family: 'Bangers', cursive;
+            font-size: 3.5rem;
+            color: var(--comic-yellow);
+            text-shadow: 
+                3px 3px 0 var(--comic-black),
+                5px 5px 0 var(--comic-red);
+            margin-bottom: 2rem;
+            letter-spacing: 0.1em;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--comic-yellow);
+            box-shadow: 0 3px 0 var(--comic-black);
+        }
+
+
+    </style>
 </head>
-<body>
-    <h1>Hola</h1>
-    
-</body>
 </html>
